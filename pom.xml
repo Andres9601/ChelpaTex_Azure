@@ -30,11 +30,6 @@
     		<artifactId>mssql-jdbc</artifactId>
     		</dependency>
 		<dependency>
-    		<groupId>com.google.cloud.sql</groupId>
-    		<artifactId>cloud-sql-connector-jdbc-sqlserver</artifactId>
-    		<version>1.7.2</version>
-		</dependency>
-		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
@@ -47,11 +42,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.google.firebase</groupId>
-			<artifactId>firebase-admin</artifactId>
-			<version>6.14.0</version>
 		</dependency>
 	</dependencies>
 
