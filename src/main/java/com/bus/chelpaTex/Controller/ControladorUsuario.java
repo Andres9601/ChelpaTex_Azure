@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bus.chelpaTex.DTO.RegistroDTO;
-import com.bus.chelpaTex.Security.FirebaseService;
 import com.bus.chelpaTex.Service.ServicioUsuario;
-import com.google.firebase.auth.FirebaseAuthException;
 
 @RestController
 @RequestMapping("/webresources/controller/controladorUsuario")
@@ -40,16 +38,6 @@ public class ControladorUsuario {
 		
 	}
 	
-	@PostMapping("/createUserFirebase")
-    public ResponseEntity<?> createUserFirebase(@RequestParam(value="email") String email, @RequestParam(value="password")String password ) throws FirebaseAuthException {
-    	try {
-    	return ResponseEntity.ok(firebaseService.createUsers(email, password));
-    	}
-    	catch (Exception e)
-    	{
-    		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("error al crear usuario" + e);
-    	}
-	}
 	
 	
 	@PostMapping(path = "/registrarUsuario", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
