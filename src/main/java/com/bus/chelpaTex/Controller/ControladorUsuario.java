@@ -23,8 +23,7 @@ public class ControladorUsuario {
 	@Autowired
 	ServicioUsuario servicioUsuario;
 	
-	@Autowired
-	FirebaseService firebaseService;
+
 	
 	@GetMapping(path= "/consultar", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> consultar() throws URISyntaxException{
