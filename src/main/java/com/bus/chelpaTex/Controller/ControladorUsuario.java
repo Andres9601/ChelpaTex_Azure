@@ -60,4 +60,13 @@ public class ControladorUsuario {
     		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("No se puede registrar el usuario "+ e);
     	}
 	}
+	
+	
+	@GetMapping("/mensaje")
+	public String mensaje(){
+		return "HOLA AZURE";
+	}
+	
+	
+	
 }
